@@ -48,9 +48,12 @@ dags:
     repo: https://github.com/USERNAME/REPO.git
     branch: main
     rev: HEAD
+    # 1. Minimizes download size by only fetching the latest commit
     depth: 1
-    subPath: dags
+    # 2. Tells Airflow to only look inside the "dags" folder of your repo
+    subPath: "dags"
     period: 30s
+
 
 
 env:
