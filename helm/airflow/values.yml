@@ -7,53 +7,45 @@ images:
     repository: hisham21113/hr-platform
     tag: "e42fa2e78057885a1602a69a4d2e478f49a07b5c"
 
-
 webserver:
   replicas: 1
-
 
 scheduler:
   replicas: 1
 
-
 triggerer:
   replicas: 0
 
-
 workers:
   replicas: 0
-
+  kubernetes:
+    envFrom:
+      - secretRef:
+          name: airflow-env
 
 postgresql:
   enabled: true
 
-
 redis:
   enabled: false
-
 
 createUserJob:
   useHelmHooks: false
 
-
 migrateDatabaseJob:
   useHelmHooks: false
 
-
 serviceAccount:
   create: true
-
 
 logs:
   persistence:
     enabled: false
 
-
 # Git Sync for DAGs
 dags:
   persistence:
     enabled: false
-
   gitSync:
     enabled: true
     repo: https://github.com/hishamkamel21/Hr-Platform.git
@@ -63,27 +55,16 @@ dags:
     subPath: "dags"
     period: 30s
 
-
-# Environment variables for Airflow components
+# Environment variables for Airflow components (webserver, scheduler, triggerer, jobs)
 env:
   - name: AIRFLOW__CORE__LOAD_EXAMPLES
     value: "False"
-
   - name: AIRFLOW__WEBSERVER__EXPOSE_CONFIG
     value: "False"
-
   - name: TZ
     value: "Africa/Cairo"
 
-
-# Load Kubernetes Secret into Airflow components
+# Load Kubernetes Secret into Airflow components (webserver, scheduler, triggerer, jobs)
 envFrom:
   - secretRef:
       name: airflow-env
-
-
-# Load Kubernetes Secret into KubernetesExecutor task pods
-kubernetesExecutor:
-  envFrom:
-    - secretRef:
-        name: airflow-env
