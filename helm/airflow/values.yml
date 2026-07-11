@@ -24,8 +24,8 @@ postgresql:
 
   image:
     registry: docker.io
-    repository: hisham21113/hr-platform
-    tag: "e42fa2e78057885a1602a69a4d2e478f49a07b5c"
+    repository: postgres
+    tag: "17"
 
 redis:
   enabled: false
