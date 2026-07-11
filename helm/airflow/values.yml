@@ -45,7 +45,7 @@ dags:
 
   gitSync:
     enabled: true
-    repo: https://github.com/USERNAME/REPO.git
+    repo: https://github.com/hishamkamel21/Hr-Platform.git
     branch: main
     rev: HEAD
     # 1. Minimizes download size by only fetching the latest commit

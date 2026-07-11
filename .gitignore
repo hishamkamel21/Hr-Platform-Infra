@@ -1,0 +1,7 @@
+teraform/.terraform 
+
+.terraform.lock.hcl 
+
+de-cluster-config 
+
+terraform.tfstate 
