@@ -7,6 +7,11 @@ images:
     repository: hisham21113/hr-platform
     tag: "e42fa2e78057885a1602a69a4d2e478f49a07b5c"
 
+config:
+  kubernetes_executor:
+    delete_worker_pods: 'True'
+    delete_worker_pods_on_failure: 'False'
+
 webserver:
   replicas: 1
 
