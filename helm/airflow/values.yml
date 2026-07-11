@@ -5,7 +5,7 @@ airflowVersion: "3.0.2"
 images:
   airflow:
     repository: hisham21113/hr-platform
-    tag: v1
+    tag: "e42fa2e78057885a1602a69a4d2e478f49a07b5c"
 
 webserver:
   replicas: 1
@@ -24,8 +24,8 @@ postgresql:
 
   image:
     registry: docker.io
-    repository: postgres
-    tag: "17"
+    repository: hisham21113/hr-platform
+    tag: "e42fa2e78057885a1602a69a4d2e478f49a07b5c"
 
 redis:
   enabled: false
