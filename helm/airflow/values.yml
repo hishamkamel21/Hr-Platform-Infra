@@ -22,10 +22,6 @@ workers:
 postgresql:
   enabled: true
 
-  image:
-    registry: docker.io
-    repository: bitnami/postgresql
-    tag: "17"
 
 redis:
   enabled: false
