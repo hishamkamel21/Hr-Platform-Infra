@@ -24,8 +24,8 @@ postgresql:
 
   image:
     registry: docker.io
-    repository: bitnami/postgresql
-    tag: 17.6.0
+    repository: postgres
+    tag: "17"
 
 redis:
   enabled: false
