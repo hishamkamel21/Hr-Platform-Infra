@@ -19,7 +19,7 @@ triggerer:
 workers:
   replicas: 0
   kubernetes:
-    envFrom:
+    extraEnvFrom: |
       - secretRef:
           name: airflow-env
 
@@ -42,7 +42,6 @@ logs:
   persistence:
     enabled: false
 
-# Git Sync for DAGs
 dags:
   persistence:
     enabled: false
@@ -55,7 +54,6 @@ dags:
     subPath: "dags"
     period: 30s
 
-# Environment variables for Airflow components (webserver, scheduler, triggerer, jobs)
 env:
   - name: AIRFLOW__CORE__LOAD_EXAMPLES
     value: "False"
@@ -64,7 +62,6 @@ env:
   - name: TZ
     value: "Africa/Cairo"
 
-# Load Kubernetes Secret into Airflow components (webserver, scheduler, triggerer, jobs)
-envFrom:
+extraEnvFrom: |
   - secretRef:
       name: airflow-env
