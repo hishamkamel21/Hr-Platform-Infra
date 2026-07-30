@@ -5,7 +5,7 @@ airflowVersion: "3.0.2"
 images:
   airflow:
     repository: hisham21113/hr-platform
-    tag: "e42fa2e78057885a1602a69a4d2e478f49a07b5c"
+    tag: "f14d54f5c5402acaf2cc900ee187b2878dc3d70c"
 
 config:
   kubernetes_executor:
