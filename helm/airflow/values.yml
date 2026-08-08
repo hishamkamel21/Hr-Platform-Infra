@@ -9,7 +9,6 @@ images:
 
 config:
   kubernetes_executor:
-    delete_worker_pods: 'False'
     delete_worker_pods_on_failure: 'False'
 
 webserver:
