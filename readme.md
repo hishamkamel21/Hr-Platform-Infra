@@ -227,20 +227,6 @@ Creates a dedicated Kubernetes ServiceAccount for Airflow Pods.
 
 ---
 
-## Logs
-
-```yaml
-logs:
-  persistence:
-    enabled: false
-```
-
-Persistent log storage is disabled.
-
-Logs exist only during the Pod lifetime, which is acceptable for local development.
-
----
-
 # GitSync
 
 ```yaml
@@ -337,25 +323,6 @@ Whenever `values.yml` changes:
 2. Compare the desired state with the cluster.
 3. Apply the changes automatically.
 4. Keep the cluster synchronized with Git.
-
----
-
-# Project Structure
-
-```text
-.
-├── terraform/
-│   └── main.tf
-│
-├── helm/
-│   └── airflow/
-│       └── values.yml
-│
-├── argocd/
-│   └── airflow-application.yml
-│
-└── README.md
-```
 
 ---
 
