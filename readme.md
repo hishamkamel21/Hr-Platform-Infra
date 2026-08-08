@@ -9,6 +9,37 @@ The infrastructure is provisioned with **Terraform**, the Kubernetes cluster is 
 The deployment uses the **KubernetesExecutor**, allowing each Airflow task to run inside its own Kubernetes Pod.
 
 ---
+## 🔗 Project Repositories
+
+### 📊 HR Platform Data
+
+The data engineering repository containing:
+
+- Apache Airflow DAGs
+- DBT transformations
+- Python data pipelines
+- Unit And Integration Tests 
+- Data quality tests
+- Ci And Cd manifests 
+
+👉 [**View HR Platform Data Repository**](https://github.com/hishamkamel21/Hr-Platform.git)
+
+---
+
+### ⚙️ HR Platform Infrastructure
+
+The infrastructure repository responsible for:
+
+- Terraform
+- Kubernetes
+- Helm
+- ArgoCD
+- Infrastructure deployment
+
+👉 [**View HR Platform Infrastructure Repository**](https://github.com/hishamkamel21/Hr-Platform-Infra.git)
+
+
+---
 
 ## Architecture
 
